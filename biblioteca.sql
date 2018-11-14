@@ -106,3 +106,30 @@ INSERT INTO `videogames` (`name`, `description`, `gamePlatform`, `applicationSub
 ('Assassin''s Creed: Unity', 'Assassin''s Creed: Unity es un videojuego de ficción histórica desarrollado por Ubisoft. Es la séptima entrega de la saga Assassin''s Creed y su temática gira en torno a la Revolución Francesa, en el siglo XVIII. El juego fue lanzado en Norteamérica el 11 de noviembre del 2014 y en Europa el 13 de noviembre de 2014.', 'PS4', 'Acción-aventura(parkour) y sigilo', 'https://drh1.img.digitalriver.com/DRHM/Storefront/Company/ubi/images/hero/ubi/ACU_hero.jpg', 'https://www.youtube.com/embed/NVE2FxMWxeg', '2014-11-13'),
 ('League of Legends', 'League of Legends, también conocido por sus siglas LoL, es un videojuego de género multiplayer online battle arena (MOBA). El juego está inspirado en el popular mapa personalizado del Warcraft III, Defense of the Ancients: Allstars (abreviado normalmente con las siglas DotA) diseñado por Steve «Guinsoo» Feak y Steve «Pendragon» Mescon.', 'PC', 'Campo De Batalla Multijugador En Línea', 'http://www.funandseriousgamefestival.com/imagenes/league-of-legends-g.jpg', 'https://www.youtube.com/embed/ZqilPmPw2yc', '2009-10-27');
 
+--
+-- Estructura de tabla para la tabla `tvseries`
+--
+
+CREATE TABLE IF NOT EXISTS `tvseries` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` text COLLATE utf8_spanish_ci NOT NULL,
+  `description` text COLLATE utf8_spanish_ci NOT NULL,
+  `creator` text COLLATE utf8_spanish_ci NOT NULL,
+  `embedUrl` text COLLATE utf8_spanish_ci NOT NULL,
+  `dateReleaseFirst` date NOT NULL,
+  `dateReleaseLast` date DEFAULT NULL,
+  `seasons` int(11) NOT NULL,
+  `episodes` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `tvseries`
+--
+
+INSERT INTO `tvseries` (`name`, `description`, `creator`, `embedUrl`, `dateReleaseFirst`, `dateReleaseLast`, `seasons`, `episodes`) VALUES
+('Breaking Bad', 'Tras cumplir 50 años, Walter White (Bryan Cranston), un profesor de química de un instituto de Albuquerque, Nuevo México, se entera de que tiene un cáncer de pulmón incurable. Casado con Skyler (Anna Gunn) y con un hijo discapacitado (RJ Mitte), la brutal noticia lo impulsa a dar un drástico cambio a su vida: decide, con la ayuda de un antiguo alumno (Aaron Paul), fabricar anfetaminas y ponerlas a la venta. Lo que pretende es liberar a su familia de problemas económicos cuando se produzca el fatal desenlace. (FILMAFFINITY)', 'Vince Gilligan', 'https://www.youtube.com/embed/HhesaQXLuRY', '2008-01-20', '2013-09-29', 5, 62),
+('Better Call Saul', 'Precuela de la serie \"Breaking Bad\", centrada en el personaje del abogado Saul Goodman (Bob Odenkirk), seis años antes de conocer a Walter White. La serie cuenta cómo un picapleitos de poca monta llamado Jimmy McGill, con problemas para llegar a fin de mes, se convierte en el abogado criminalista Saul Goodman. (FILMAFFINITY)', 'Vince Gilligan,  Peter Gould', 'https://youtu.be/sYJftKTVGoA', '2015-02-08', NULL, 4, 40),
+('House of Cards', ' El implacable y manipulador congresista Francis Underwood (Kevin Spacey), con la complicidad de su calculadora mujer (Robin Wright), maneja con gran destreza los hilos de poder en Washington. Su intención es ocupar la Secretaría de Estado del nuevo gobierno. Sabe muy bien que los medios de comunicación son vitales para conseguir su propósito, por lo que decide convertirse en la \"garganta profunda\" de la joven y ambiciosa periodista Zoe Barnes (Kate Mara), a la que ofrece exclusivas para desestabilizar y hundir a sus adversarios políticos. Nueva adaptación de la novela homónima de Michael Dobbs, en la que se basó una miniserie británica de 1990. (FILMAFFINITY)', 'Beau Willimon', 'https://youtu.be/jNTgPxHKlbo', '2013-02-01', '2018-11-02', 6, 73),
+('Game of Thrones', 'La historia se desarrolla en un mundo ficticio de carácter medieval donde hay Siete Reinos. Hay tres líneas argumentales principales: la crónica de la guerra civil dinástica por el control de Poniente entre varias familias nobles que aspiran al Trono de Hierro, la creciente amenaza de los Otros, seres desconocidos que viven al otro lado de un inmenso muro de hielo que protege el Norte de Poniente, y el viaje de Daenerys Targaryen, la hija exiliada del rey que fue asesinado en una guerra civil anterior, y que pretende regresar a Poniente para reclamar sus derechos. Tras un largo verano de varios años, el temible invierno se acerca a los Siete Reinos. Lord Eddard \'Ned\' Stark, señor de Invernalia, deja sus dominios para ir a la corte de su amigo, el rey Robert Baratheon en Desembarco del Rey, la capital de los Siete Reinos. Stark se convierte en la Mano del Rey e intenta desentrañar una maraña de intrigas que pondrá en peligro su vida y la de todos los suyos. Mientras tanto diversas facciones conspiran con un solo objetivo: apoderarse del trono. (FILMAFFINITY)', 'David Benioff,  D.B. Weiss', 'https://youtu.be/zTyYGtJIHGM', '2011-04-17', NULL, 7, 67);
+COMMIT;

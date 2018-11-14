@@ -1,5 +1,7 @@
 # API Collection + JSON para biblioteca multimedia
 
+[![Build Status](https://travis-ci.org/organizacion-sesion-3-fgonzalezc/sesion6-travis-heroku.svg?branch=master)](https://travis-ci.org/organizacion-sesion-3-fgonzalezc/sesion6-travis-heroku)
+
 API CRUD para interactuar con una base de datos de una biblioteca multimedia. Utiliza el formato [Collection + JSON](http://amundsen.com/media-types/collection/).
 
 ## Acceso en servidor local de desarrollo
@@ -12,4 +14,4 @@ composer install
 
 ## Acceso al servidor de producción (Heroku)
 
-http://APP_NAME.herokuapp.com
+https://fgonzalezc-sesion6.herokuapp.com/
